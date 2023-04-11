@@ -9,4 +9,6 @@ import Foundation
 
 public struct Test {
     public let text = "Hello, World!"
+    
+    public init() {}
 }
