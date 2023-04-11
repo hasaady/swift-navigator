@@ -11,10 +11,6 @@ let package = Package(
         .library(
             name: "NavigationHost",
             targets: ["NavigationHost"]),
-        
-            .library(
-                name: "NewLibrary",
-                targets: ["NewLibrary"]),
 
     ],
     dependencies: [
@@ -27,10 +23,6 @@ let package = Package(
         .target(
             name: "NavigationHost",
             dependencies: []),
-        
-            .target(
-                name: "NewLibrary",
-                dependencies: []),
 
         .testTarget(
             name: "NavigationHostTests",
