@@ -11,6 +11,11 @@ let package = Package(
         .library(
             name: "NavigationHost",
             targets: ["NavigationHost"]),
+        
+            .library(
+                name: "NewLibrary",
+                targets: ["NewLibrary"]),
+
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,6 +27,11 @@ let package = Package(
         .target(
             name: "NavigationHost",
             dependencies: []),
+        
+            .target(
+                name: "NewLibrary",
+                dependencies: []),
+
         .testTarget(
             name: "NavigationHostTests",
             dependencies: ["NavigationHost"]),
