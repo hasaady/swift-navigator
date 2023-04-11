@@ -1,0 +1,11 @@
+import XCTest
+@testable import NavigationHost
+
+final class NavigationHostTests: XCTestCase {
+    func testExample() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct
+        // results.
+        XCTAssertEqual(NavigationHost().text, "Hello, World!")
+    }
+}
