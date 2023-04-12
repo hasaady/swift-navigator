@@ -18,6 +18,7 @@ public class AppNavigation: ObservableObject {
     
     var onPush: ((_ viewController: UIViewController, _ animated: Bool) -> Void)?
     var onPop: ((_ to: PopTo, _ animated: Bool) -> Void)?
+    var onPresent: ((_ viewController: UIViewController, _ animated: Bool) -> Void)?
     var onDismiss: ((_ animated: Bool, _ completion: (() -> Void)?) -> Void)?
     
     public init() {}
@@ -29,6 +30,11 @@ public class AppNavigation: ObservableObject {
     
     public func push(_ viewController: UIViewController, animated: Bool) {
         onPush?(viewController, animated)
+    }
+    
+    public func present(animated: Bool, _ view: () -> some View) {
+        let viewController = UIHostingController(rootView: view())
+        onPresent?(viewController, animated)
     }
     
     public func pop(animated: Bool) {

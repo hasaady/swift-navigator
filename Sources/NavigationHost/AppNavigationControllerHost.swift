@@ -25,6 +25,10 @@ struct AppNavigationControllerHost<Screen: View>: UIViewControllerRepresentable 
             navigationController.pushViewController(viewController, animated: animated)
         }
                 
+        navigation.onPresent = { (viewController, animated) in
+            navigationController.present(viewController, animated: animated)
+        }
+
         navigation.onDismiss = { (animated, completion) in
             navigationController.dismiss(animated: animated, completion: completion)
         }
