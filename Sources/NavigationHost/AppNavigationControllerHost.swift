@@ -24,11 +24,11 @@ struct AppNavigationControllerHost<Screen: View>: UIViewControllerRepresentable 
         navigation.onPush = { (viewController, animated) in
             navigationController.pushViewController(viewController, animated: animated)
         }
-                
+        
         navigation.onPresent = { (viewController, animated) in
             navigationController.present(viewController, animated: animated)
         }
-
+        
         navigation.onDismiss = { (animated, completion) in
             navigationController.dismiss(animated: animated, completion: completion)
         }
@@ -44,6 +44,10 @@ struct AppNavigationControllerHost<Screen: View>: UIViewControllerRepresentable 
             case .root:
                 navigationController.popToRootViewController(animated: animated)
             }
+        }
+        
+        navigation.topViewController = {
+            return navigationController.viewControllers.last
         }
         
         return navigationController

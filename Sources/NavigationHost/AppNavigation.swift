@@ -21,6 +21,8 @@ public class AppNavigation: ObservableObject {
     var onPresent: ((_ viewController: UIViewController, _ animated: Bool) -> Void)?
     var onDismiss: ((_ animated: Bool, _ completion: (() -> Void)?) -> Void)?
     
+    var topViewController: (() -> UIViewController?)?
+
     public init() {}
     
     public func push(animated: Bool, _ view: () -> some View) {
