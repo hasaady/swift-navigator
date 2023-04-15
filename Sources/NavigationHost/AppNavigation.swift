@@ -55,4 +55,8 @@ public class AppNavigation: ObservableObject {
         onDismiss?(animated, completion)
     }
     
+    public func getTopViewController() -> UIViewController? {
+        topViewController?()
+    }
+    
 }
