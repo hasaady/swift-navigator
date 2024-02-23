@@ -1,5 +1,5 @@
 //
-//  AppNavigation.swift
+//  Navigator.swift
 //  
 //
 //  Created by Hanan on 01/04/2023.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-public class AppNavigation: ObservableObject {
+public class Navigator: ObservableObject {
     
     enum PopTo {
         case previous
