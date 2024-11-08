@@ -4,13 +4,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "AppNavigator",
+    name: "SwiftNavigator",
     platforms: [.iOS(.v13)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "AppNavigator",
-            targets: ["AppNavigator"]),
+            name: "SwiftNavigator",
+            targets: ["SwiftNavigator"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -20,11 +20,11 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "AppNavigator",
+            name: "SwiftNavigator",
             dependencies: []),
 
         .testTarget(
-            name: "AppNavigatorTests",
-            dependencies: ["AppNavigator"]),
+            name: "SwiftNavigatorTests",
+            dependencies: ["SwiftNavigator"]),
     ]
 )
